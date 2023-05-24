@@ -12,7 +12,7 @@ module "author" {
 
 }
 
-module "lambda_get_all_authors" {
+module "lambda" {
   source                  = "./modules/lambda/eu-central-1/"
   context                 = module.label.context
   name                    = "authors"
