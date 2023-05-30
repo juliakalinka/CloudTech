@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "this2" {
 }
 
 module "s3_bucket_frontend" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+  source  = "terraform-aws-modules/s3-bucket/aws"
   version = "3.9.0"
 
   bucket = format("%s-s3-cloudfront-tf", module.label.id)
@@ -32,7 +32,7 @@ module "s3_bucket_frontend" {
 
   versioning = {
     enabled = false
-}
+  }
 }
 
 resource "aws_s3_bucket_policy" "this" {
